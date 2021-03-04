@@ -1,0 +1,92 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import "colors";
+@mixin container {
+  width: 980px;
+  height: 100%;
+  margin: 0 auto;
+}
+#root{
+  width: 100%;
+  min-height: 100vh;
+  background: $background-blue;
+
+  .container{
+    width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+
+
+
+
+    .header-container{
+      @include container;
+      width: 100%;
+      height: 80px;
+      margin: 0 auto;
+      background: $background-black;
+
+      .logo{
+        height: 100%;
+        padding: 15px;
+        img{
+          height: 100%;
+        }
+      }
+    }
+
+
+    .main-container{
+      @include container;
+      width: 100%;
+      min-height: calc(100vh - 80px);
+      background: $background-darckgrey;
+      padding: 60px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .album{
+        width: calc((100% / 3) - 40px);
+        background: $background-black;
+        color: $text-color-1;
+        margin-bottom: 20px;
+        text-align: center;
+        padding: 20px;
+
+        a{
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .poster{
+
+        }
+
+        .title{
+          font-size: 20px;
+        }
+
+        .author{
+          font-size: 16px;
+          color: $text-color-2;
+        }
+
+        .year{
+          font-style: 10px;
+          color: $text-color-3;
+        }
+
+        .album{
+          font-size: 12px;
+          color: $text-color-3;
+        }
+      }
+    }
+
+  }
+}

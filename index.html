@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+    <title>php-ajax-disks-vueJs</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="container">
+
+        <header>
+          <div class="header-container">
+            <div class="logo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png" alt="">
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <div class="main-container">
+              <div class="album" v-for="album in albums">
+                <div class="poster">
+                  <img style="width:100%" :src="album.poster" alt="">
+                </div>
+                <div class="title">
+                  <a href="#"> {{album.title}} </a>
+                </div>
+                <div class="author">
+                  <a href="#"> {{album.author}} </a>
+                </div>
+                <div class="year">
+                  <a href="#"> {{album.year}} </a>
+                </div>
+              </div>
+          </div>
+        </main>
+
+      </div>
+
+      <script src="js/script.js" charset="utf-8"></script>
+    </div>
+  </body>
+</html>
